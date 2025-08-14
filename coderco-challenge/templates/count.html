@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Visit Counter</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: radial-gradient(circle, #89f7fe, #66a6ff);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .counter-box {
+            background: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 350px;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: #333;
+        }
+
+        .count-number {
+            font-size: 3em;
+            font-weight: bold;
+            color: #66a6ff;
+            margin: 20px 0;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        a.button {
+            display: inline-block;
+            padding: 12px 24px;
+            background: linear-gradient(45deg, #11998e, #38ef7d);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        a.button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body>
+    <div class="counter-box">
+        <h1>📊 Total Visit Count</h1>
+        <div class="count-number">{{ count }}</div>
+        <p>Thanks for stopping by! Every click helps me keep track of the number of visits</p>
+        <a href="/" class="button">Go Back Home</a>
+    </div>
+</body>
+</html>

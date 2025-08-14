@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to the Counter</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(270deg, #ff9a9e, #fad0c4, #fad0c4);
+            background-size: 600% 600%;
+            animation: gradientShift 12s ease infinite;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 400px;
+        }
+
+        h1 {
+            color: #444;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        a.button {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #f7b42c);
+            color: white;
+            padding: 14px 26px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1em;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        a.button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>🚀 Welcome to my Visit Counter!</h1>
+        <p>Click below to see how many times this page has been visited</p>
+        <a href="/count" class="button">Check My Visits</a>
+    </div>
+</body>
+</html>
