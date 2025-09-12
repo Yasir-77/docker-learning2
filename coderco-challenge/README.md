@@ -14,6 +14,8 @@ The app renders a welcome page (/) and a counter page (/count) that increments a
 
 ## ⚒️ Breakdown of whats inside each file 
 
+### [app.py](https://github.com/Yasir-77/docker-learning2/blob/main/coderco-challenge/app.py)
+
 ### Flask (`web`)
 - Python Flask application.
 - Has two routes:
@@ -22,17 +24,17 @@ The app renders a welcome page (/) and a counter page (/count) that increments a
 - Connects to Redis using environment variables (`REDIS_HOST`, `REDIS_PORT`).
 - Runs on port **5002** inside the container.
 
----
 
-### Redis (`redis`)
+
+#### Redis (`redis`)
 - In-memory key-value database.
 - Stores the visit count under the key `visits`.
 - Data is persisted using a Docker volume (`redis-data`).
 - Exposed on port **6379**.
 
----
 
-### Nginx (`nginx`)
+
+#### Nginx (`nginx`)
 - Acts as a reverse proxy for the Flask app.
 - Listens on host port **5002** (`localhost:5002`).
 - Forwards requests to the Flask container (`web:5002`).
@@ -40,7 +42,7 @@ The app renders a welcome page (/) and a counter page (/count) that increments a
 
 ---
 
-### Dockerfile
+#### [Dockerfile](https://github.com/Yasir-77/docker-learning2/blob/main/coderco-challenge/Dockerfile)
 - Defines how the Flask image is built:
   - Starts from a lightweight Python 3.8 base image.
   - Sets working directory to `/app`.
@@ -51,7 +53,7 @@ The app renders a welcome page (/) and a counter page (/count) that increments a
 
 ---
 
-### docker-compose.yml
+### [docker-compose.yml](https://github.com/Yasir-77/docker-learning2/blob/main/coderco-challenge/docker-compose.yml)
 - Orchestrates all services together.
 - **Web service (Flask)**:
   - Built from the Dockerfile.
@@ -67,7 +69,7 @@ The app renders a welcome page (/) and a counter page (/count) that increments a
 
 ---
 
-### nginx.conf
+### [nginx.conf](https://github.com/Yasir-77/docker-learning2/blob/main/coderco-challenge/nginx.conf)
 - Defines proxy rules for Nginx.
 - Creates an upstream called `flask_app` pointing to `web:5002`.
 - Listens on port 5002.
@@ -75,7 +77,7 @@ The app renders a welcome page (/) and a counter page (/count) that increments a
 
 ---
 
-### Templates (`welcome-page.html` & `count.html`)
+### [Templates (`welcome-page.html` & `count.html`)](https://github.com/Yasir-77/docker-learning2/tree/main/coderco-challenge/templates)
 - **welcome-page.html**:
   - Displays a welcome message.
   - Provides a button to check the visit counter.
