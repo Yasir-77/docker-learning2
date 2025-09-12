@@ -16,7 +16,7 @@ The app renders a welcome page (/) and a counter page (/count) that increments a
 
 ### [app.py](https://github.com/Yasir-77/docker-learning2/blob/main/coderco-challenge/app.py)
 
-### Flask (`web`)
+#### Flask (`web`)
 - Python Flask application.
 - Has two routes:
   - `/` → displays a welcome page.
@@ -42,7 +42,7 @@ The app renders a welcome page (/) and a counter page (/count) that increments a
 
 ---
 
-#### [Dockerfile](https://github.com/Yasir-77/docker-learning2/blob/main/coderco-challenge/Dockerfile)
+### [Dockerfile](https://github.com/Yasir-77/docker-learning2/blob/main/coderco-challenge/Dockerfile)
 - Defines how the Flask image is built:
   - Starts from a lightweight Python 3.8 base image.
   - Sets working directory to `/app`.
