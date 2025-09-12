@@ -12,9 +12,7 @@ The app renders a welcome page (/) and a counter page (/count) that increments a
 - Nginx (nginx) — Reverse proxy exposing the app on localhost:5002
 - Docker Compose — Orchestrates the services & wiring
 
-## Breakdown of Whats inside each file:
-
-## 🧩 What’s inside
+## ⚒️ Breakdown of whats inside each file 
 
 ### Flask (`web`)
 - Python Flask application.
